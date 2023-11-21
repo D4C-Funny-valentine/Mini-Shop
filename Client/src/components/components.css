@@ -1,0 +1,24 @@
+.addToCart {
+  transform: translateY(0);
+  opacity: 0;
+  transition: 0.3s all ease-in-out;
+}
+
+.imgCard:hover .addToCart {
+  transform: translateY(-10px);
+  opacity: 1;
+}
+
+.tooltip {
+  opacity: 0;
+  transition: 0.2s all ease-in;
+}
+
+.tooltip-icons:hover .tooltip {
+  opacity: 1;
+}
+
+.scroll-hide::-webkit-scrollbar {
+  scroll-behavior: smooth;
+  display: none;
+}

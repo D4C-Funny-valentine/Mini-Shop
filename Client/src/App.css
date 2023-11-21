@@ -1,0 +1,22 @@
+::-webkit-scrollbar {
+  scroll-behavior: smooth;
+  display: none;
+}
+
+.backdrop_image {
+  opacity: 0;
+  transition: 0.4s all ease-in-out;
+}
+
+.image {
+  opacity: 1;
+  transition: 0.4s all ease-in-out;
+}
+
+.img_container:hover .backdrop_image{
+  opacity: 1;
+}
+
+.img_container:hover .image{
+  opacity: 0;
+}
