@@ -10,14 +10,14 @@ const useFetch = (id) => {
       try {
         setIsLoading(true);
         const productResponse = await fetch(
-          `https://mini-shop-hy57.onrender.com/api/product`
+          `https://valentine-shop.onrender.com/api/product`
         );
         const productData = await productResponse.json();
         setProducts(productData);
 
         if (id) {
           const selectedProductResponse = await fetch(
-            `https://mini-shop-hy57.onrender.com/api/product/${id}`
+            `https://valentine-shop.onrender.com/api/product/${id}`
           );
           const selectedProductData = await selectedProductResponse.json();
           setProductDetail(selectedProductData);
