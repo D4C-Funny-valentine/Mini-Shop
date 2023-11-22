@@ -34,12 +34,12 @@ const OrderMenu = () => {
               ))}
             </div>
             <div className="py-4 px-3 rounded-2xl mb-3 bg-blue-800 mt-auto flex justify-between">
-              <div className="flex items-center space-x-2 text-white font-semibold">
+              <div className="flex items-center text-sm sm:text-sm lg:text-base md:text-base space-x-1 sm:space-x-1 md:space-x-2 lg:space-x-2 text-white font-semibold">
                 <h4>Total Amount : </h4>
                 <span>$ {totalPrice?.toFixed(2)}</span>
               </div>
               <div className="">
-                <button className="flex items-center space-x-2 font-semibold text-white border-2 rounded-full px-3 py-2">
+                <button className="flex items-center text-sm sm:text-sm lg:text-base md:text-base space-x-1 sm:space-x-1 md:space-x-2 font-semibold text-white border-2 rounded-full px-3 py-2">
                   <span>Order now</span>
                   <AiOutlineSend />
                 </button>

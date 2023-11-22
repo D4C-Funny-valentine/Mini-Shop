@@ -10,7 +10,7 @@ const Search = () => {
 
   return (
     <>
-      {searchProducts.length === 0 ? (
+      {searchProducts?.length === 0 ? (
         <div className="h-screen">
           <div className="flex justify-center items-center h-full flex-col">
             <Lottie animationData={SearchAnimation} loop={true} />

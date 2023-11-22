@@ -17,6 +17,9 @@ const Similar = ({ category }) => {
       </div>
     );
   }
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <div className="">
@@ -28,18 +31,23 @@ const Similar = ({ category }) => {
           </span>
         </div>
       </div>
-      <div className="flex justify-center md:justify-start lg:justify-start flex-wrap gap-3 overflow-scroll h-[70vh] scroll-hide">
-        {similarProducts?.map((item) => (
-          <div className="rounded-xl shadow-md overflow-hidden" key={item._id}>
-            <Link to={`/detail/${item._id}`}>
-              <img
-                src={item.backdrop_image}
-                alt=""
-                className="object-contain w-[240px]"
-              />
-            </Link>
-          </div>
-        ))}
+      <div className="">
+        <div className="flex justify-center md:justify-start lg:justify-start flex-wrap gap-4 md:gap-6 lg:gap-8 overflow-scroll md:h-[67vh] lg:h-[70vh] scroll-hide">
+          {similarProducts?.map((item) => (
+            <div
+              className="rounded-xl shadow-md md:overflow-hidden lg:overflow-hidden"
+              key={item._id}
+            >
+              <Link to={`/detail/${item._id}`} onClick={scrollToTop}>
+                <img
+                  src={item.backdrop_image}
+                  alt=""
+                  className="object-contain max-w-[240px]"
+                />
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

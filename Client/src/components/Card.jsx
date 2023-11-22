@@ -31,10 +31,10 @@ const Card = (item) => {
   const toggleFavorite = () => {
     if (isFavorite) {
       dispatch(removeFromFavorite(item));
-      toast("Remove successfully from favorite cart")
+      toast("Remove successfully from favorite cart");
     } else {
       dispatch(addToFavorite(item));
-      toast("Add successfully to favorite cart")
+      toast("Add successfully to favorite cart");
     }
   };
 
@@ -75,7 +75,7 @@ const Card = (item) => {
         </div>
         <div className="addToCart flex justify-evenly absolute bottom-0 w-full">
           <div
-            className="p-2 rounded-full bg-white shadow-md cursor-pointer relative tooltip-icons"
+            className="p-2 rounded-full bg-white shadow-md cursor-pointer relative tooltip-icons hidden sm:hidden md:block lg:block"
             onClick={() => setRate(!isRate)}
           >
             {isRate ? (
@@ -88,7 +88,7 @@ const Card = (item) => {
             </h6>
           </div>
           <Link to={`/detail/${item._id}`}>
-            <div className="p-2 rounded-full bg-white shadow-md cursor-pointer relative tooltip-icons">
+            <div className="p-2 rounded-full bg-white shadow-md cursor-pointer relative tooltip-icons hidden sm:hidden md:block lg:block">
               <BsSearch size={20} color="black" />
               <h6 className="select-none text-[9px] w-12 h-6 bg-black text-white font-semibold absolute -top-5 right-1 left-0 m-auto rounded-full flex justify-center items-center tooltip">
                 Detail
@@ -96,7 +96,7 @@ const Card = (item) => {
             </div>
           </Link>
           <div
-            className="p-2 rounded-full bg-white shadow-md cursor-pointer relative tooltip-icons"
+            className="p-2 rounded-full bg-white shadow-md cursor-pointer relative tooltip-icons hidden sm:hidden md:block lg:block"
             onClick={addToCartHandler}
           >
             <BsBag size={20} color="black" />

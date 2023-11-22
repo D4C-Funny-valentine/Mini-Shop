@@ -17,7 +17,7 @@ const useFetch = (id) => {
 
         if (id) {
           const selectedProductResponse = await fetch(
-            `https://valentine-shop.onrender.com/api/product/${id}`
+            `https://valentine-shop.onrender.com/api/product/${id}` 
           );
           const selectedProductData = await selectedProductResponse.json();
           setProductDetail(selectedProductData);
