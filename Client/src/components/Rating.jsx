@@ -8,7 +8,7 @@ const Rating = ({ rating }) => {
       ) : (
         <BsStarHalf size={20} color="yellow" />
       )}
-      <h6 className="font-semibold">{rating.rate}</h6>
+      <h6 className="font-semibold text-base">{rating.rate}</h6>
       <h6 className="text-sm text-gray-700">Reviews({rating.review})</h6>
     </div>
   );

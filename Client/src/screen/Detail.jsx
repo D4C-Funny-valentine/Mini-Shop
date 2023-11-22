@@ -31,7 +31,7 @@ const Detail = () => {
         <div className="flex flex-col justify-between h-full">
           <div className="lg:hidden md:hidden sm:block block">
             <div className="flex justify-center ">
-              <div className="-translate-x-10 block sm:hidden md:hidden lg:hidden">
+              <div className="-translate-x-5 block sm:hidden md:hidden lg:hidden">
                 <Link to={"/"}>
                   <IoArrowBack size={24} color="black" />
                 </Link>
@@ -66,13 +66,15 @@ const Detail = () => {
                 <h6 className="capitalize">{item.category}</h6>
               </div>
             </div>
-            <p className="tracking-wide text-gray-800 font-medium text-lg mb-4 leading-8">
+            <p className=" md:tracking-wide lg:tracking-wide text-gray-700 font-medium text-base md:text-lg lg:text-lg mb-4 leading-8">
               {item.description}
             </p>
-            <div className="flex space-x-8 items-center">
-              <h6 className="font-semibold text-lg">Price : $ {item.price}</h6>
-              <div className="flex space-x-3">
-                <h6 className="text-md font-medium">Rates :</h6>
+            <div className="flex space-x-3 md:space-x-7 lg:space-x-8 items-center">
+              <h6 className="font-semibold text-base md:text-lg lg:text-lg">
+                Price : $ {item.price}
+              </h6>
+              <div className="flex space-x-1 md:space-x-2 lg:space-x-3">
+                <h6 className="text-base font-medium">Rates :</h6>
                 <Rating rating={item.rating} />
               </div>
             </div>
@@ -81,7 +83,7 @@ const Detail = () => {
                 onClick={addToCartHandler}
                 className="px-6 py-2 rounded-full bg-black text-white font-semibold flex items-center space-x-2 active:scale-95"
               >
-                <h3 className="text-lg">Add to Cart</h3>
+                <h3 className="text-base md:text-lg lg:text-lg">Add to Cart</h3>
                 <BsCart4 size={20} />
               </button>
             </div>
